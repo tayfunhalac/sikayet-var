@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="org.eclipse.jetty.client.api.ContentResponse"/>
+<fullyQualifiedTypeName name="org.eclipse.jetty.client.api.Result"/>
+<fullyQualifiedTypeName name="org.eclipse.jetty.http.HttpMethod"/>
+<fullyQualifiedTypeName name="java.nio.file.Paths"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="parser.parser.testCase"/>
+<fullyQualifiedTypeName name="parser.WriteFile"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="sikayetvar.getIndex"/>
+<fullyQualifiedTypeName name="sikayetvar.readLinesForInfo"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="sikayetvar.Processes"/>
+<fullyQualifiedTypeName name="parser.complaint"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="sikayetvar.Complaint"/>
+</qualifiedTypeNameHistroy>

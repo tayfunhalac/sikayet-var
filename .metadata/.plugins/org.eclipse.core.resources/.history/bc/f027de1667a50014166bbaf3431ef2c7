@@ -1,0 +1,49 @@
+package sikayetvar;
+
+import java.io.IOException;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ProcessesTest {
+	private String[] title = new String[10];
+	private String[] sikayet = new String[10];
+	private String[] sikayetDurumu = new String[10];
+	private String[] kullanici = new String[10];
+	private String[] firma = new String[10];
+	private String[] url = new String[10];
+	/*@Test
+	public void testProcess() throws Exception {
+		 Processes tester = new Processes();
+		 tester.readLinesForUrls(url);
+	}*/
+
+		  @Test
+		  public void testReadLinesForUrls() throws Exception {
+				 Processes tester = new Processes();
+				 tester.client("http://www.sikayetvar.com/sikayetler/");
+				 tester.readLinesForUrls(url);
+				 for(int i=0; i<10; i++)
+				{
+					 Assert.assertNotNull(url[i]);					 
+				}
+		  }
+		  @Test
+		  public void testReadLinesForInfo() throws Exception {
+			  Processes tester = new Processes();
+			  tester.client("http://www.sikayetvar.com/sikayetler/");
+			  tester.readLinesForUrls(url);
+			  tester.readLinesForInfo(this.url, title, sikayet, sikayetDurumu, kullanici, firma);
+			  for(int i=0; i<10; i++)
+				{
+					 Assert.assertNotNull(title[i]);
+					 Assert.assertNotNull(sikayet[i]);
+					 Assert.assertNotNull(sikayetDurumu[i]);
+					 Assert.assertNotNull(kullanici[i]);
+					 Assert.assertNotNull(firma[i]);					 
+				}
+		  }
+		  
+		 
+			
+}

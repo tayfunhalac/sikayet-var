@@ -1,0 +1,24 @@
+package parser;
+
+public class getIndex {
+	public String getIndex(int a)
+	{
+	String str;
+	switch(a)
+	{
+		case 0: str = "sikayetDetayNavigasyon";
+		break;
+		case 1: str = "/firma/detay";
+		break;
+		case 2: str = "sikayetDetayMetin";
+		break;
+		case 3: str = "<b>Şikayet Durumu :";
+		break;
+		case 4: str = "sikayetBilgi";
+		break;
+		default: str = null;
+		break;
+	}
+	return str;
+	}
+}

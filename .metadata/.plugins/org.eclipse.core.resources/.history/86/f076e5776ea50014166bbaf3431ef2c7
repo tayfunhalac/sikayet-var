@@ -1,0 +1,16 @@
+/*
+ * @version 26 Ocak 2015
+ * @a
+ * 
+ */
+
+package sikayetvar;
+
+import sikayetvar.Processes;
+
+public class Main {
+	public static void main(String args[]) throws Exception {
+
+		new Processes().process();
+	}
+}

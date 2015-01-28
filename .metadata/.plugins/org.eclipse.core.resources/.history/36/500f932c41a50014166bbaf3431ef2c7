@@ -1,0 +1,70 @@
+package sikayetvar;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
+import sikayetvar.GetIndex;
+
+public class readLinesForInfo 
+{
+	private String[] title = new String[10];
+	private String[] sikayet = new String[10];
+	private String[] sikayetDurumu = new String[10];
+	private String[] kullanici = new String[10];
+	private String[] firma = new String[10];
+	
+	public readLinesForInfo(String[] url) throws Exception
+	{
+		for (int j = 0; j < 10; j++) 
+		{
+			Client client = new Client(url[j]);
+			BufferedReader file = new BufferedReader(new FileReader("html.txt"));
+	        String line;
+	        while (( line = file.readLine()) != null)
+	         {
+				
+	             int[] index = new int[5];
+				 index[0] = line.indexOf(GetIndex(0));
+	             index[1] = line.indexOf(GetIndex(1));
+	             index[2] = line.indexOf(getIndex(2)); 
+	             index[3] = line.indexOf(getIndex(3));
+	             index[4] = line.indexOf(getIndex(4));
+	             
+	             if (index[0] > -1) 
+	             {
+	                 for(int x = 0; x<12; x++)
+	                	 line = file.readLine();
+	                 
+	                 firma[j] =line.substring(line.indexOf(">")+1,line.indexOf("</a"));
+	             }     
+	             else if (index[1] > -1) 
+	             {
+	                 title[j] = firma[j]+line.substring(line.indexOf("/a>")+3,line.indexOf("</h"));
+	             }
+	             else if (index[2] > -1) 
+	             {
+	                 line = file.readLine();
+	                 sikayet[j] =line.substring(line.indexOf("</p")+6);
+	             }  
+	             else if (index[3] > -1) 
+	             {
+	                 line = file.readLine();
+	                 sikayetDurumu[j] =line.substring(line.lastIndexOf("</b")+9,line.indexOf("</f"));
+	             }
+	             else if (index[4] > -1) 
+	             {
+	            	 
+	                 String partOff =line.substring(line.indexOf("<a")+3,line.indexOf("/a"));
+	                 kullanici[j] = partOff.substring(partOff.indexOf(">")+1,partOff.indexOf("<"));
+	             }
+		     }	
+			file.close();
+			File f = new File("html.txt");
+	        f.delete();
+		}
+	        
+		}
+	}
+
+

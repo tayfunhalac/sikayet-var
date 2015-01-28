@@ -1,0 +1,36 @@
+package sikayetvar;
+
+public class TakeIndex
+{
+	private String str;
+	
+	public int TakeIndex(int a, String line)
+	{
+		switch(a)
+		{
+			case 0: str = "sikayetDetayNavigasyon";
+			break;
+			case 1: str = "/firma/detay";
+			break;
+			case 2: str = "sikayetDetayMetin";
+			break;
+			case 3: str = "<b>Şikayet Durumu :";
+			break;
+			case 4: str = "sikayetBilgi";
+			break;
+			default: this.setStr(null);
+			break;
+		}
+		return a;
+	}
+
+	public String getStr() 
+	{
+		return str;
+	}
+
+	public void setStr(String str) 
+	{
+		this.str = str;
+	}
+}

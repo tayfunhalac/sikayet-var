@@ -1,0 +1,28 @@
+package parser;
+
+import java.util.concurrent.TimeUnit;
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.Response;
+import org.eclipse.jetty.http.HttpMethod;
+import org.eclipse.jetty.http.HttpVersion;
+
+public class clients {
+
+    public static void main(String[] args) throws Exception {
+        
+        HttpClient client = new HttpClient();
+        client.start();
+
+        Response response = client.newRequest("www.google.com", 80)
+                .scheme("http")
+                .agent("Jetty HTTP client")
+                .version(HttpVersion.HTTP_1_1)
+                .method(HttpMethod.HEAD)
+                .timeout(5, TimeUnit.SECONDS)
+                .send();
+
+        System.out.println(response.getStatus());
+
+        client.stop();       
+    }
+}

@@ -1,0 +1,24 @@
+package sikayetvar;
+
+public class Processes 
+{
+	public void Process() throws Exception
+	{
+		String[] title = new String[10];
+		String[] sikayet = new String[10];
+		String[] sikayetDurumu = new String[10];
+		String[] kullanici = new String[10];
+		String[] firma = new String[10];
+		
+		String mainUrl = "http://www.sikayetvar.com/sikayetler";
+		String[] url = new String[10];
+		
+		Client client = new Client(mainUrl+"/");
+		ReadLinesForUrls urls = new ReadLinesForUrls(url);
+		ReadLinesForInfo info = new ReadLinesForInfo(url, title,sikayet,sikayetDurumu, kullanici, firma);
+		
+		
+	}
+	
+	
+}

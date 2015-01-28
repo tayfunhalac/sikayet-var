@@ -1,0 +1,26 @@
+package sikayetvar;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.google.gson.Gson;
+
+public class CreateJson 
+{ 
+	public void CreateGson(complaint[] compObj)
+	{
+		Gson gson = new Gson();
+		String json = gson.toJson(compObj);
+
+		try {
+			FileWriter writer = new FileWriter("sikayetler.json");
+			writer.write(json);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Json created!");
+	}
+
+}

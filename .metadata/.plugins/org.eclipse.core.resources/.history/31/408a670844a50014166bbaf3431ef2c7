@@ -1,0 +1,43 @@
+package parser;
+
+import junit.framework.TestCase;
+import parser.getIndex;
+
+
+public class IndexTest extends TestCase 
+{
+	private TakeIndex getindex;
+
+	public void testBolum()
+	{
+		assertEquals(getindex.GetIndex(0),"sikayetDetayNavigasyon");
+		assertEquals(getindex.GetIndex(1),"/firma/detay");
+		assertEquals(getindex.GetIndex(2),"sikayetDetayMetin");
+		assertEquals(getindex.GetIndex(3),"<b>Şikayet Durumu :");
+		assertEquals(getindex.GetIndex(4),"sikayetBilgi");
+	}
+
+	public void setUp() throws Exception
+	{
+		super.setUp();
+		getindex = new TakeIndex();
+	}
+
+	public void tearDown() throws Exception
+	{
+		super.tearDown();
+		getindex = null;
+	}
+
+	public TakeIndex getGetIndex()
+	{
+		return getindex;
+	}
+
+	public void setGetIndex(TakeIndex getindex)
+	{
+		this.getindex = getindex;
+	}
+
+
+}

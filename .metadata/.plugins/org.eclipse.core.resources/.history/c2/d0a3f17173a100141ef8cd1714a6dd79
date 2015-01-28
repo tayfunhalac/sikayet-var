@@ -1,0 +1,19 @@
+package parser;
+
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.ContentResponse;
+
+public class clients {
+
+    public static void main(String[] args) throws Exception {
+        
+        HttpClient client = new HttpClient();
+        client.start();
+
+        ContentResponse res = client.GET("http://www.something.com");
+        
+        System.out.println(res.getContentAsString());
+        
+        client.stop();
+    }
+}

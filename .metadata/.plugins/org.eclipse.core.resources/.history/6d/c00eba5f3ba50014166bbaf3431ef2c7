@@ -1,0 +1,14 @@
+package sikayetvar;
+
+public class Processes 
+{
+	public void Process() throws Exception
+	{
+		String mainUrl = "http://www.sikayetvar.com/sikayetler";
+		String[] url = new String[10];
+		Client client = new Client(mainUrl+"/");
+		ReadLines readLines = new ReadLines(url);
+	}
+	
+	
+}

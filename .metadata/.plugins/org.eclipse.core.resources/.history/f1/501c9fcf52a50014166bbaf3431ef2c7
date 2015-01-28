@@ -1,0 +1,33 @@
+package sikayetvar;
+
+public class Processes 
+{
+	public Processes() throws Exception
+	{
+		String[] title = new String[10];
+		String[] sikayet = new String[10];
+		String[] sikayetDurumu = new String[10];
+		String[] kullanici = new String[10];
+		String[] firma = new String[10];
+		
+		String mainUrl = "http://www.sikayetvar.com/sikayetler/";
+		String[] url = new String[10];
+		
+		Client client = new Client(mainUrl);
+		ReadLinesForUrls urls = new ReadLinesForUrls(url);
+		ReadLinesForInfo info = new ReadLinesForInfo(url, title,sikayet,sikayetDurumu, kullanici, firma);
+		 String yy = firma[5];
+         if(yy != null)
+         System.out.println(yy);
+		complaint[] compObj = new complaint[10];
+
+		for (int k = 0; k < 10; k++) 
+		{
+			compObj[k] = new complaint(title[k], sikayet[k], firma[k],sikayetDurumu[k], kullanici[k]);
+		}
+		
+		
+	}
+	
+	
+}

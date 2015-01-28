@@ -1,0 +1,11 @@
+package sikayetvar;
+
+public class readLinesForInfo 
+{
+	private String[] title = new String[10];
+	private String[] sikayet = new String[10];
+	private String[] sikayetDurumu = new String[10];
+	private String[] kullanici = new String[10];
+	private String[] firma = new String[10];
+
+}

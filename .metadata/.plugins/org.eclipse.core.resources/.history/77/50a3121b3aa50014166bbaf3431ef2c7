@@ -1,0 +1,16 @@
+package sikayetvar;
+
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
+
+public class Main 
+{
+	public static void main(String args[]) throws Exception  
+	{
+		String mainUrl = "http://www.sikayetvar.com/sikayetler";
+		Client client = new Client(mainUrl+"/");
+	}
+		
+
+}

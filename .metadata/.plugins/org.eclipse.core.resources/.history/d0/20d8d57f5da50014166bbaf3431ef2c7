@@ -1,0 +1,152 @@
+package sikayetvar;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.ContentResponse;
+
+import com.google.gson.Gson;
+
+public class Processes 
+{
+	public void process() throws Exception
+	{
+		String[] title = new String[10];
+		String[] sikayet = new String[10];
+		String[] sikayetDurumu = new String[10];
+		String[] kullanici = new String[10];
+		String[] firma = new String[10];
+		
+		String mainUrl = "http://www.sikayetvar.com/sikayetler/";
+		String[] url = new String[10];
+		
+		client(mainUrl);
+		readLinesForUrls(url);
+		readLinesForInfo(url, title,sikayet,sikayetDurumu, kullanici, firma);
+		Complaint[] compObj = new Complaint[10];
+		
+		for (int k = 0; k < 10; k++) 
+		{
+			compObj[k] = new Complaint(title[k], sikayet[k], firma[k],sikayetDurumu[k], kullanici[k]);
+		}
+		createJson(compObj);
+		
+	}
+	
+	public void readLinesForUrls(String[] url) throws IOException
+	{
+		BufferedReader file = new BufferedReader(new FileReader("html.txt"));
+		int s = 0;
+        String line;
+		while (( line = file.readLine()) != null)
+        { 
+             int indexfound = line.indexOf("sikayetBaslik");
+
+             if (indexfound > -1) 
+             {
+                 for(int x = 0; x<3; x++)
+                 {
+                	 line = file.readLine();
+                 }
+                 url[s] =line.substring(line.indexOf("/")+1,line.indexOf(">")-1);
+                 s++;
+             }
+         }
+         file.close();
+         File f = new File("html.txt");
+         f.delete();
+	}
+	
+	public void readLinesForInfo(String[] url, String[] title, String[] sikayet, String[] sikayetDurumu, String[] kullanici, String[] firma) throws Exception
+	{
+		for (int j = 0; j < 10; j++) 
+		{
+			client("http:/"+url[j]+"/");
+			BufferedReader file = new BufferedReader(new FileReader("html.txt"));
+	        String line;
+	        while (( line = file.readLine()) != null)
+	         {
+				
+	             int[] index = new int[5];
+				 index[0] = line.indexOf("sikayetDetayNavigasyon");
+	             index[1] = line.indexOf("/firma/detay");
+	             index[2] = line.indexOf("sikayetDetayMetin");
+	             index[3] = line.indexOf("<b>Şikayet Durumu :");
+	             index[4] = line.indexOf("sikayetBilgi");
+	             
+	             if (index[0] > -1) 
+	             {
+	                 for(int x = 0; x<12; x++)
+	                	 line = file.readLine();
+	                 
+	                 firma[j] =line.substring(line.indexOf(">")+1,line.indexOf("</a"));
+	             }     
+	             else if (index[1] > -1) 
+	             {
+	                title[j] = firma[j]+line.substring(line.indexOf("/a>")+3,line.indexOf("</h"));
+	             }
+	             else if (index[2] > -1) 
+	             {
+	                 line = file.readLine();
+	                 sikayet[j] =line.substring(line.indexOf("</p")+6);
+	             }  
+	             else if (index[3] > -1) 
+	             {
+	                 line = file.readLine();
+	                 sikayetDurumu[j] =line.substring(line.lastIndexOf("</b")+9,line.indexOf("</f"));
+	             }
+	             else if (index[4] > -1) 
+	             {
+	            	 
+	                 String partOff =line.substring(line.indexOf("<a")+3,line.indexOf("/a"));
+	                 kullanici[j] = partOff.substring(partOff.indexOf(">")+1,partOff.indexOf("<"));
+	             }
+		     }	
+			file.close();
+			File f = new File("html.txt");
+	        f.delete();
+		}
+	        
+		}
+	
+	public void createJson(Complaint[] compObj)
+	{
+		Gson gson = new Gson();
+		String json = gson.toJson(compObj);
+
+		try {
+			FileWriter writer = new FileWriter("sikayetler.json");
+			writer.write(json);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Json created!");
+	}
+	
+	public void client(String mainUrl) throws Exception
+	{
+		HttpClient httpClient = new HttpClient();
+		httpClient.setFollowRedirects(false);
+		httpClient.start();
+		ContentResponse response = httpClient.GET(mainUrl);
+		writeFile(response.getContentAsString());
+		httpClient.stop();
+	}
+	
+	public void writeFile(String response) throws FileNotFoundException, UnsupportedEncodingException
+	{
+		PrintWriter writer = new PrintWriter("html.txt", "UTF-8");
+		writer.print(response);
+		writer.close();
+	}
+	
+}

@@ -1,0 +1,25 @@
+package sikayetvar;
+
+
+public class GetIndex 
+{
+	private String str;
+	public GetIndex(int a)
+	{
+	switch(a)
+	{
+		case 0: this.str = "sikayetDetayNavigasyon";
+		break;
+		case 1: this.str = "/firma/detay";
+		break;
+		case 2: this.str = "sikayetDetayMetin";
+		break;
+		case 3: this.str = "<b>Şikayet Durumu :";
+		break;
+		case 4: this.str = "sikayetBilgi";
+		break;
+		default: this.str = null;
+		break;
+	}
+	}
+}

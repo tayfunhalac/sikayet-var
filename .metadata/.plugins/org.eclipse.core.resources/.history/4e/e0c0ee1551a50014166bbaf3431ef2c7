@@ -1,0 +1,46 @@
+package sikayetvar;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadLinesForUrls 
+{
+	private String[] url = new String[10];
+	
+	public ReadLinesForUrls(String[] url) throws IOException
+	{
+		BufferedReader file = new BufferedReader(new FileReader("html.txt"));
+		int s = 0;
+        String line;
+		while (( line = file.readLine()) != null)
+        { 
+             int indexfound = line.indexOf("sikayetBaslik");
+
+             if (indexfound > -1) 
+             {
+                 for(int x = 0; x<3; x++)
+                 {
+                	 line = file.readLine();
+                 }
+                 url[s] =line.substring(line.indexOf("/")+1,line.indexOf(">")-1);
+                 String yy = url[s];
+                 System.out.println(yy);
+                 s++;
+             }
+         }
+         file.close();
+         File f = new File("html.txt");
+         f.delete();
+	}
+	public String[] geturl()
+	{
+		return url;
+	}
+	public void seturl(String[] url)
+	{
+		this.url = url;         
+	}
+	
+}

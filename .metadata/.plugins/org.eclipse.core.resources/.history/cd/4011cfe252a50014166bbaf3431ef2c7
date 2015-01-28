@@ -1,0 +1,16 @@
+package sikayetvar;
+ 
+
+public class complaint 
+{
+	
+	public complaint(String Baslik,String Sikayet,String Firma,String SikayetDur,String Kullanici)
+	{
+		Baslik = Baslik;         
+		Sikayet = Sikayet;     
+		Firma = Firma;
+        SikayetDur = SikayetDur; 
+        Kullanici = Kullanici;  
+	}
+	   
+}

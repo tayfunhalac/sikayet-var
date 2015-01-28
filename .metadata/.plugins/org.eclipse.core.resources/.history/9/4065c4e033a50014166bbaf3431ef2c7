@@ -1,0 +1,19 @@
+package parser;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
+public class WriteFile 
+{
+	public WriteFile()
+	{
+	PrintWriter writer = new PrintWriter("html.txt", "UTF-8");
+	writer.print(response.getContentAsString());
+	writer.close();
+
+	BufferedReader file = new BufferedReader(new FileReader("html.txt"));
+	}
+}

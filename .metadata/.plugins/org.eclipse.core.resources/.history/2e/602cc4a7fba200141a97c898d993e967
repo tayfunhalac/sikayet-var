@@ -1,0 +1,44 @@
+package parser;
+
+import tests.testCase;
+import junit.framework.TestCase;
+import parser.parser;
+
+
+public class IndexTest extends TestCase 
+{
+	private GetIndex getindex;
+
+	public void testBolum()
+	{
+		assertEquals(getindex.GetIndex(0),"sikayetDetayNavigasyon");
+		assertEquals(getindex.GetIndex(1),"sikayetDetayNavigasyon");
+		assertEquals(getindex.GetIndex(2),"sikayetDetayNavigasyon");
+		assertEquals(getindex.GetIndex(3),"sikayetDetayNavigasyon");
+		assertEquals(getindex.GetIndex(4),"sikayetDetayNavigasyon");
+	}
+
+	public void setUp() throws Exception
+	{
+		super.setUp();
+		testcase = new testCase();
+	}
+
+	public void tearDown() throws Exception
+	{
+		super.tearDown();
+		testcase = null;
+	}
+
+	public testCase gettestCase()
+	{
+		return testcase;
+	}
+
+	public void settestCase(testCase testcase)
+	{
+		this.testcase = testcase;
+	}
+
+
+}

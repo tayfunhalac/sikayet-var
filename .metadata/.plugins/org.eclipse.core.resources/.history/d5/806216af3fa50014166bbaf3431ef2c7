@@ -1,0 +1,36 @@
+package sikayetvar;
+
+
+public class GetIndex extends readLinesForInfo
+{
+	private String str;
+	
+	public GetIndex(int a)
+	{
+		switch(a)
+		{
+			case 0: this.setStr("sikayetDetayNavigasyon");
+			break;
+			case 1: this.setStr("/firma/detay");
+			break;
+			case 2: this.setStr("sikayetDetayMetin");
+			break;
+			case 3: this.setStr("<b>Şikayet Durumu :");
+			break;
+			case 4: this.setStr("sikayetBilgi");
+			break;
+			default: this.setStr(null);
+			break;
+		}
+	}
+
+	public String getStr() 
+	{
+		return str;
+	}
+
+	public void setStr(String str) 
+	{
+		this.str = str;
+	}
+}

@@ -1,0 +1,12 @@
+package sikayetvar;
+
+
+public class Main 
+{
+	private static Processes process;
+
+	public static void main(String args[]) throws Exception  
+	{
+		process = new Processes();
+	}
+}

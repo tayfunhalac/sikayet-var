@@ -1,0 +1,32 @@
+package parser;
+ 
+
+public class complaint 
+{
+	private String Baslik;
+	private String Sikayet;
+	private String Firma;
+	private String SikayetDur;
+	private String Kullanici;
+	
+	public complaint(String Baslik,String Sikayet,String Firma,String SikayetDur,String Kullanici,String Cevap)
+	{
+		this.Baslik = Baslik;         
+		this.Sikayet = Sikayet;     
+		this.Firma = Firma;
+        this.SikayetDur = SikayetDur; 
+        this.Kullanici = Kullanici;  
+	}
+	
+	
+ /*   public String getBaslik()  		{        return Baslik;    			}
+    public String getSikayet() 		{        return Sikayet;   			}
+    public String getSikayetDur()     {        return SikayetDur;         }
+    public String getKullanici()		{        return Kullanici;  	    }
+     
+    public void setBaslik(String Baslik)  		 {    this.Baslik = Baslik;         }
+    public void setSikayet(String Sikayet)		 {    this.Sikayet = Sikayet;       }
+    public void setSikayetDurumu(String SikayetDur){    this.SikayetDur = SikayetDur; }
+    public void setKullanici(String Kullanici)     {    this.Kullanici = Kullanici;   }*/
+    
+}

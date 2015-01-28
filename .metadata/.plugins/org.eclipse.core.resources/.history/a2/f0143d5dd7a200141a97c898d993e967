@@ -1,0 +1,27 @@
+package parser;
+
+import junit.framework.TestCase;
+
+public class test extends TestCase 
+{
+	
+private testCase testcase;
+
+public void testBolum()
+{
+	assertTrue(testcase.bolum(5,1) == 5);
+}
+
+public void setUp() throws Exception
+{
+super.setUp();
+testcase = new testCase();
+}
+
+public void tearDown() throws Exception
+{
+super.tearDown();
+testcase = null;
+}
+
+}

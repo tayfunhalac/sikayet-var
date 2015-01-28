@@ -1,0 +1,33 @@
+package sikayetvar;
+
+import java.io.File;
+
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.ContentResponse;
+
+import sikayetvar.WriteFile;
+
+
+public class Client
+{
+	private HttpClient httpClient = new HttpClient();
+			
+	public Client(String mainUrl) throws Exception
+	{
+		httpClient.setFollowRedirects(false);
+		httpClient.start();
+		ContentResponse response = httpClient.GET(mainUrl);
+		WriteFile file = new WriteFile(response.getContentAsString());
+		httpClient.stop();
+		File f = new File("html.txt");
+        f.delete();
+	}
+	public HttpClient gethttpClient()
+	{
+		return httpClient ;
+	}
+	public void sethttpClient(HttpClient httpClient)
+	{
+		this.httpClient = httpClient;         
+	}
+}

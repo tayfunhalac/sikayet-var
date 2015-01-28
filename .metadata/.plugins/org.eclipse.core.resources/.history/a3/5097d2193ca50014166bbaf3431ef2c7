@@ -1,0 +1,12 @@
+package sikayetvar;
+
+public class Processes 
+{
+	public void Process() throws Exception
+	{
+		String mainUrl = "http://www.sikayetvar.com/sikayetler";
+		Client client = new Client(mainUrl+"/");
+	}
+	
+	
+}

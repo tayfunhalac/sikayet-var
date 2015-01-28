@@ -1,0 +1,9 @@
+package parser;
+
+public class TestCase 
+{
+	public int bolum(int a, int b)
+	{
+	return a/b;
+	}
+}

@@ -1,0 +1,20 @@
+package sikayetvar;
+
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.ContentResponse;
+import sikayetvar.Main;
+
+public class Client
+{
+	HttpClient httpClient = new HttpClient();
+	httpClient.setFollowRedirects(false);
+	
+	try	{	httpClient.start();	} 
+	catch (Exception e) {	e.printStackTrace();}
+	
+	public Client(String mainUrl)
+	{
+		
+	}
+
+}

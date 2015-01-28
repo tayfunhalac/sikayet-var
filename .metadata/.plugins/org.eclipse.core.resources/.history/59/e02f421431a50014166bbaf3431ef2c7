@@ -1,0 +1,22 @@
+package sikayetvar;
+
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.ContentResponse;
+import sikayetvar.Main;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
+import java.io.IOException;
+
+public class Client
+{{
+		HttpClient httpClient = new HttpClient();
+		httpClient.setFollowRedirects(false);
+		httpClient.start();
+	
+	
+	public Client(String mainUrl)
+	{
+		ContentResponse response = httpClient.GET(mainUrl);
+		//file yazma yap burada
+	}
+}
