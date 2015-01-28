@@ -6047,3 +6047,210 @@ Caused by: com.jcraft.jsch.JSchException: Auth fail
 	at com.jcraft.jsch.Session.connect(Session.java:512)
 	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
 	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-01-28 11:00:57.106
+!MESSAGE An internal error occurred during: "Removing file from Git Index".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.core.op.RemoveFromIndexOperation.execute(RemoveFromIndexOperation.java:85)
+	at org.eclipse.egit.ui.internal.actions.RemoveFromIndexActionHandler$1.run(RemoveFromIndexActionHandler.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:02:08.092
+!MESSAGE An exception occurred during push on URI ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:197)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 8 more
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:02:23.629
+!MESSAGE An exception occurred during push on URI ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:197)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 8 more
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:02:51.154
+!MESSAGE An exception occurred during push on URI ssh://emineizmir1990%40gmail.com@github.com/EmineIzmir/sikayetVar.git: ssh://emineizmir1990%40gmail.com@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.errors.TransportException: ssh://emineizmir1990%40gmail.com@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:197)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 8 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:11:06.240
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:11:06.241
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:13:14.644
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:13:14.645
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:14:07.447
+!MESSAGE An exception occurred during push on URI git@github.com:EmineIzmir/sikayetVar.git: git@github.com:EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 10 more
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:14:21.100
+!MESSAGE An exception occurred during push on URI ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 10 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:14:40.458
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:14:40.461
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:15:00.349
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:15:00.351
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:15:30.213
+!MESSAGE An exception occurred during push on URI ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 10 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:16:49.901
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-01-28 11:16:49.902
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:16:52.480
+!MESSAGE An exception occurred during push on URI ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 10 more
+
+!ENTRY org.eclipse.egit.core 4 0 2015-01-28 11:17:07.568
+!MESSAGE An exception occurred during push on URI ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://EmineIzmir@github.com/EmineIzmir/sikayetVar.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:159)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:121)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:306)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:116)
+	... 10 more
