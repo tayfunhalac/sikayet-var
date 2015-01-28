@@ -2,9 +2,11 @@
 <section name="Workbench">
 	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="CommitDialog.authorValues">
+		<item value="EmineIzmir &lt;emineizmir1990@gmail.com&gt;"/>
 		<item value="bahtiyarerden@galaksiya.com &lt;bahtiyarerden@galaksiya.com&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="EmineIzmir &lt;emineizmir1990@gmail.com&gt;"/>
 		<item value="bahtiyarerden@galaksiya.com &lt;bahtiyarerden@galaksiya.com&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.dialogs.ResetTargetSelectionDialog.dialogBounds">
@@ -15,12 +17,19 @@
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">
-		<item value="626" key="DIALOG_WIDTH"/>
+		<item value="646" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="657" key="DIALOG_HEIGHT"/>
-		<item value="337" key="DIALOG_X_ORIGIN"/>
+		<item value="705" key="DIALOG_HEIGHT"/>
+		<item value="314" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="GitCommitMessageComponent">
+		<list key="/home/galaksiya/workspace-emine/parser/.git">
+			<item value="false"/>
+			<item value="EmineIzmir &lt;emineizmir1990@gmail.com&gt;"/>
+			<item value="&#x0A;&#x0A;Signed-off-by: EmineIzmir &lt;emineizmir1990@gmail.com&gt;"/>
+			<item value="EmineIzmir &lt;emineizmir1990@gmail.com&gt;"/>
+			<item value="617b39a3515c9142b3be7ee1708fb3e4a0d050df"/>
+		</list>
 	</section>
 </section>
